@@ -42,6 +42,7 @@ async function run(): Promise<void> {
       ['--git-author-name', `${authorName}"`],
       ['--vcs-login', `${user.login()}"`],
       ['--env-var', '"SBT_OPTS=-Xmx2048m -Xss8m -XX:MaxMetaspaceSize=512m"'],
+      ['--env-var', '"JVM_OPTS=-Dsbt.color=false -Dsbt.log.noformat=true -Dsbt.supershell=false"'],
       ['--process-timeout', '20min'],
       ['--vcs-api-host', githubApiUrl],
       ignoreOptsFiles ? '--ignore-opts-files' : [],
